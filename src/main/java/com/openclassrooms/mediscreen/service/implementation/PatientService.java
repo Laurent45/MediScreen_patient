@@ -8,6 +8,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
 @Service
@@ -30,14 +31,16 @@ public class PatientService implements IPatientService {
     }
 
     @Override
+    @Transactional
     public Patient savePatient(Patient patient) {
         log.info("Save a patient: " + patient);
         return patientRepository.save(patient);
     }
 
     @Override
+    @Transactional
     public Patient updatePatient(Long id, Patient patient) {
-        log.info("Update a patient: " + patient);
+        log.info("Update a patient id: " + id + " with fields: " + patient);
         Patient patientToUpdate = getPatientById(id);
 
         if (patient.getFirstName() != null) {
@@ -63,6 +66,7 @@ public class PatientService implements IPatientService {
     }
 
     @Override
+    @Transactional
     public void deletePatient(Long id) {
         log.info("Delete a patient, id: " + id);
         Patient patient = getPatientById(id);
