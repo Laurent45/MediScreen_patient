@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+            name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>UI patient | Update</title>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css"
+          rel="stylesheet">
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body class="container">
+    <form class="col card p-3 my-5" method="post" th:action="@{/ui/patient/update/{id}(id=${patient.id})}" th:object="${patient}">
+        <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input class="form-control" id="firstName" placeholder="Enter First Name" required autocomplete="off"
+                   th:field="*{firstName}"
+                   type="text"/>
+            <p th:if="${#fields.hasErrors('firstName')}" th:errorclass="error" th:errors="*{firstName}"></p>
+        </div>
+        <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input class="form-control" id="lastName" placeholder="Enter Last Name" required autocomplete="off"
+                   th:field="*{lastName}"
+                   type="text"/>
+            <p th:if="${#fields.hasErrors('lastName')}" th:errorclass="error" th:errors="*{lastName}"></p>
+        </div>
+        <div class="form-group">
+            <label for="dateOfBirth">Date of birth</label>
+            <input class="form-control" id="dateOfBirth" placeholder="Enter Date of Birth" required autocomplete="off"
+                   th:field="*{dateOfBirth}"
+                   type="date"/>
+            <p th:if="${#fields.hasErrors('dateOfBirth')}" th:errorclass="error" th:errors="*{dateOfBirth}"></p>
+        </div>
+        <div class="form-group">
+            <label for="gender">Gender</label>
+            <select class="form-control " id="gender" required th:field="*{gender}">
+                <option hidden value="">Select a gender</option>
+                <option
+                        th:each="gender : ${T(com.openclassrooms.mediscreen.enumeration.Gender).values()}"
+                        th:text="${gender.getSymbol()}"
+                        th:value="${gender.getSymbol()}">
+                </option>
+            </select>
+            <p th:if="${#fields.hasErrors('gender')}" th:errorclass="error" th:errors="*{gender}"></p>
+        </div>
+        <div class="form-group">
+            <label for="address">Address</label>
+            <input class="form-control" id="address" placeholder="Enter Address" required autocomplete="off"
+                   th:field="*{address}"
+                   type="text"/>
+            <p th:if="${#fields.hasErrors('address')}" th:errorclass="error" th:errors="*{address}"></p>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone</label>
+            <input class="form-control" id="phone" placeholder="Enter Phone" required autocomplete="off"
+                   th:field="*{phone}"
+                   type="text"/>
+            <p th:if="${#fields.hasErrors('phone')}" th:errorclass="error" th:errors="*{phone}"></p>
+        </div>
+        <div>
+            <input class="btn btn-primary" type="submit" value="Update Patient">
+            <input class="btn btn-dark" type="reset" value="Reset">
+            <a th:href="@{/ui/patient/}" class="btn btn-danger">Cancel</a>
+        </div>
+    </form>
+</body>

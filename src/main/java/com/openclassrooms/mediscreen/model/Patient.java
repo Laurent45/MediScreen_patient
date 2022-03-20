@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import javax.validation.constraints.Past;
@@ -29,6 +30,7 @@ public class Patient {
 
     @Column(name = "date_of_birth")
     @Past
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate dateOfBirth;
 
     @GenderConstraint(message = "Gender must be M(MALE) or F(FEMALE)")
