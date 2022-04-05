@@ -1,4 +1,4 @@
-package com.openclassrooms.mediscreen.enumeration;
+package com.openclassrooms.mediscreen_patient.enumeration;
 
 public enum Gender {
     FEMALE("F"),

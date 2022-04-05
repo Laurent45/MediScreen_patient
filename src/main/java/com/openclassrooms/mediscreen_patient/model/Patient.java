@@ -1,6 +1,6 @@
-package com.openclassrooms.mediscreen.model;
+package com.openclassrooms.mediscreen_patient.model;
 
-import com.openclassrooms.mediscreen.validation.GenderConstraint;
+import com.openclassrooms.mediscreen_patient.validation.GenderConstraint;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;

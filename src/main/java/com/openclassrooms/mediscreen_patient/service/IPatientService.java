@@ -1,6 +1,6 @@
-package com.openclassrooms.mediscreen.service;
+package com.openclassrooms.mediscreen_patient.service;
 
-import com.openclassrooms.mediscreen.model.Patient;
+import com.openclassrooms.mediscreen_patient.model.Patient;
 
 import java.util.List;
 

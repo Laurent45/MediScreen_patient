@@ -1,14 +1,12 @@
-package com.openclassrooms.mediscreen.controller;
+package com.openclassrooms.mediscreen_patient.controller;
 
-import com.openclassrooms.mediscreen.model.Patient;
-import com.openclassrooms.mediscreen.service.IPatientService;
+import com.openclassrooms.mediscreen_patient.model.Patient;
+import com.openclassrooms.mediscreen_patient.service.IPatientService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
-import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,7 +18,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/v1/patient")
 @RequiredArgsConstructor
-@Api(tags = "CRUD operations")
+@Api(tags = "CRUD operations about patient information")
 public class PatientController {
 
     private final IPatientService patientService;

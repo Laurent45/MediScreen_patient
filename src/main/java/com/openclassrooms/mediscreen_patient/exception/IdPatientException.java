@@ -1,4 +1,4 @@
-package com.openclassrooms.mediscreen.exception;
+package com.openclassrooms.mediscreen_patient.exception;
 
 import lombok.extern.log4j.Log4j2;
 import org.springframework.http.HttpStatus;

@@ -1,9 +1,9 @@
-package com.openclassrooms.mediscreen.service.implementation;
+package com.openclassrooms.mediscreen_patient.service.implementation;
 
-import com.openclassrooms.mediscreen.exception.IdPatientException;
-import com.openclassrooms.mediscreen.model.Patient;
-import com.openclassrooms.mediscreen.repository.PatientRepository;
-import com.openclassrooms.mediscreen.service.IPatientService;
+import com.openclassrooms.mediscreen_patient.exception.IdPatientException;
+import com.openclassrooms.mediscreen_patient.model.Patient;
+import com.openclassrooms.mediscreen_patient.repository.PatientRepository;
+import com.openclassrooms.mediscreen_patient.service.IPatientService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Service;

@@ -1,9 +1,9 @@
-package com.openclassrooms.mediscreen.service.implementation;
+package com.openclassrooms.mediscreen_patient.service.implementation;
 
-import com.openclassrooms.mediscreen.enumeration.Gender;
-import com.openclassrooms.mediscreen.exception.IdPatientException;
-import com.openclassrooms.mediscreen.model.Patient;
-import com.openclassrooms.mediscreen.repository.PatientRepository;
+import com.openclassrooms.mediscreen_patient.enumeration.Gender;
+import com.openclassrooms.mediscreen_patient.exception.IdPatientException;
+import com.openclassrooms.mediscreen_patient.model.Patient;
+import com.openclassrooms.mediscreen_patient.repository.PatientRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -20,7 +20,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.*;
-
 
 @ExtendWith(MockitoExtension.class)
 class PatientServiceUT {

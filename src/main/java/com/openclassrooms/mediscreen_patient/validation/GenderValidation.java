@@ -1,6 +1,6 @@
-package com.openclassrooms.mediscreen.validation;
+package com.openclassrooms.mediscreen_patient.validation;
 
-import com.openclassrooms.mediscreen.enumeration.Gender;
+import com.openclassrooms.mediscreen_patient.enumeration.Gender;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;

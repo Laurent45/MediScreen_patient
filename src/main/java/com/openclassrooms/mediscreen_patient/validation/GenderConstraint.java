@@ -1,4 +1,4 @@
-package com.openclassrooms.mediscreen.validation;
+package com.openclassrooms.mediscreen_patient.validation;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;

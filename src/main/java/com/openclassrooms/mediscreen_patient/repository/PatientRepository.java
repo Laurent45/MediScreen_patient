@@ -1,6 +1,6 @@
-package com.openclassrooms.mediscreen.repository;
+package com.openclassrooms.mediscreen_patient.repository;
 
-import com.openclassrooms.mediscreen.model.Patient;
+import com.openclassrooms.mediscreen_patient.model.Patient;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
