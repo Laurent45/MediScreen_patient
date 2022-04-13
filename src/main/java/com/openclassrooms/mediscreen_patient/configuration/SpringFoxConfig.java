@@ -20,7 +20,8 @@ public class SpringFoxConfig {
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.openclassrooms.mediscreen.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.openclassrooms" +
+                        ".mediscreen_patient.controller"))
                 .paths(PathSelectors.ant("/api/v1/patient/**"))
                 .build()
                 .apiInfo(metaData());
